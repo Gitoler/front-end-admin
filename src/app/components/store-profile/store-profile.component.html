@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>Thông tin của cửa hàng</h2>
+<div class="container content">
+  <mat-dialog-content>
+    <div class="store-certificate">
+      <div class="row">
+        <div class="col-6">
+          <div class="store-certificate__item">
+            <h4 class="store-certificate__header">Giấy chứng nhận an toàn</h4>
+            <div class="store-certificate__image">
+              <img
+                [src]="
+                  !store?.giayChungNhanAnToan
+                    ? 'assets/images/no-image.jpg'
+                    : store?.giayChungNhanAnToan
+                "
+                alt="Giấy chứng nhận an toàn"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="store-certificate__item">
+            <h4 class="store-certificate__header">Giấy phép kinh doanh</h4>
+            <div class="store-certificate__image">
+              <img
+                [src]="
+                  !store?.giayPhepKinhDoanh
+                    ? 'assets/images/no-image.jpg'
+                    : store?.giayPhepKinhDoanh
+                "
+                alt="Giấy phép kinh doanh"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h6>Tên cửa hàng: {{ store.tenCuaHang }}</h6>
+        </div>
+        <div class="col-6">
+          <h6>Mã số thuế: {{ store.maSoThue }}</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h6>Độ uy tín: {{ store.doUyTin }}</h6>
+        </div>
+        <div class="col-6">
+          <h6>Địa chỉ: {{ store.diaChi }}</h6>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+</div>
